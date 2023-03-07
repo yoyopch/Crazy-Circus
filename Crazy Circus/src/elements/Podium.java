@@ -22,8 +22,8 @@ public class Podium {
         return this.Podiums;
     }
     /**
-     * verifComparaisonPodiums - Permet de vérifier si les podiums de la carte Objectif sont égaux à ceux du plateau
-     * @return true s'ils sont égaux, sinon false
+     * verifComparaisonPodiums - Permet de verifier si les podiums de la carte Objectif sont egaux a ceux du plateau
+     * @return true s'ils sont egaux, sinon false
      */
     public static boolean verifComparaisonPodiums(Carte Objectif, CrazyCircus plateau) {
         return Objectif.getRouge().getAnimaux().equals(plateau.getPodiumRouge().getAnimaux()) &&

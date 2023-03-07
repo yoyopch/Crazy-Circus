@@ -128,7 +128,7 @@ public class Affichage {
     public static String affichageGagnant(String dompteurs) {
         StringBuilder sLeaderboard = new StringBuilder();
         sLeaderboard.append(dompteurs);
-        sLeaderboard.append(" a gagn? la manche !");
+        sLeaderboard.append(" a gagne la manche !");
         return sLeaderboard.toString();
     }
 
@@ -139,9 +139,9 @@ public class Affichage {
      */
     public static String affichageFinDuJeu(String dompteurs) {
         StringBuilder sLeaderboard = new StringBuilder();
-        sLeaderboard.append("F?licitations ! ");
+        sLeaderboard.append("Felicitations ! ");
         sLeaderboard.append(dompteurs);
-        sLeaderboard.append(" a gagn? la partie !");
+        sLeaderboard.append(" a gagne la partie !");
 
         return sLeaderboard.toString();
     }
@@ -169,8 +169,8 @@ public class Affichage {
 
         sb.append(System.lineSeparator());
 
-        sb.append("D?marrage du jeu en cours...\n");
-        sb.append("Saississez vos fouets et la sc?ne est ? vous ! ");
+        sb.append("Demarrage du jeu en cours...\n");
+        sb.append("Saississez vos fouets et la scene est a vous ! ");
         sb.append(System.lineSeparator());
 
         return sb.toString();
