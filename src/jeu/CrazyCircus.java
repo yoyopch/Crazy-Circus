@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class CrazyCircus {
 
-    private ArrayList<Podium> Jeu; // Le jeu - ArrayList de Podium
+    private final ArrayList<Podium> Jeu; // Le jeu - ArrayList de Podium
     public static final int BLEU = 0; // Indice correspondant au podium Bleu
     public static final int ROUGE = 1; // Indice correspondant au podium Rouge
 

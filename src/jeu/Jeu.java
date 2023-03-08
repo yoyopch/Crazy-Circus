@@ -9,13 +9,13 @@ import java.util.Scanner;
 
 public class Jeu {
 
-    private ArrayList<Dompteur> dompteurs; // ArrayList de Dompteur
+    private final ArrayList<Dompteur> dompteurs; // ArrayList de Dompteur
 
     private Carte Initiale; // Carte initiale contenant la situation iniale à chaque tour
 
     private Carte Objectif; // Carte objectif qui contient la situation finale à chaque tour
 
-    private CrazyCircus plateau; // le plateau qui contient les podiums
+    private final CrazyCircus plateau; // le plateau qui contient les podiums
 
     /**
      * Constructor de Jeu - permet de creer le jeu( les cartes initiales et objectifs, inscrit les dompteurs)
@@ -26,7 +26,7 @@ public class Jeu {
         Initiale = new Carte();
         Objectif = new Carte();
         plateau = new CrazyCircus(Initiale.getBleu(), Initiale.getRouge());
-
+        int compteurDompteurs=0;
         for (String s : args) {
             Dompteur d = new Dompteur(s);
             dompteurs.add(d);
@@ -35,9 +35,17 @@ public class Jeu {
                 System.out.println("Relancez le jeu avec tous les prenoms des dompteurs differents");
                 System.exit(0);
             }
-
+            compteurDompteurs++;
         }
-
+        if(compteurDompteurs==1){
+            System.out.println("Malheureusement, il ne peut pas y avoir 1 seul dompteur");
+            System.out.println("Relancez le jeu avec au moins 2 dompteurs.");
+            System.exit(0);
+        }else if(compteurDompteurs==0){
+            System.out.println("Malheureusement, vous ne pouvez pas lancer le jeu avec 1 seul dompteur.");
+            System.out.println("Veuillez relancer le jeu avec au moins 2 dompteurs.");
+            System.exit(0);
+        }
         Initiale.generateCarteObjectif();
         premierTour();
     }

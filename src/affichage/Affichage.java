@@ -6,7 +6,7 @@ import dompteur.Dompteur;
 import java.util.ArrayList;
 
 /**
- * Enum�re les diff�rents animaux existants
+ * Enumere les differents animaux existants
  * 
  * @author WEBER Yotam & PECH Yohann
  * @version 2.2 02/03/2023
@@ -121,9 +121,9 @@ public class Affichage {
     }
 
     /**
-     * 
-     * @param dompteurs
-     * @return
+     * affichageGagnant - Afficher le gagnant de la manche
+     * @param dompteurs Le nom du dompteur
+     * @return l'affichage du gagnat
      */
     public static String affichageGagnant(String dompteurs) {
         StringBuilder sLeaderboard = new StringBuilder();
@@ -133,22 +133,21 @@ public class Affichage {
     }
 
     /**
-     * 
-     * @param dompteurs
-     * @return
+     * affichageFinDuJeu - Afficher le gagnant du jeu final
+     * @param dompteurs le gagnat du jeu final
+     * @return l'affichage du gagnant final
      */
     public static String affichageFinDuJeu(String dompteurs) {
         StringBuilder sLeaderboard = new StringBuilder();
         sLeaderboard.append("Felicitations ! ");
         sLeaderboard.append(dompteurs);
         sLeaderboard.append(" a gagne la partie !");
-
         return sLeaderboard.toString();
     }
 
     /**
-     * 
-     * @return
+     * debutJeu - Affichage graphique de "Crazy Circus"
+     * @return l'affichage graphique
      */
     public static String debutJeu() {
         StringBuilder sb = new StringBuilder();
@@ -175,23 +174,5 @@ public class Affichage {
 
         return sb.toString();
     }
-    /**
-     * Permet d'ajouter un dompteur au jeu
-     *
-     * @param nomDeScene le nom du dompteur
-     * @return un String d?crivant ce qu'a fait la m?thode
-     * @see fctDompteur#getDompteur()
-     * @see fctDompteur#dompteurExists(String)
-     */
-    /*
-     * public String addDompteur(String nomDeScene) {
-     * fctDompteur fctD = new fctDompteur();
-     * if (!(fctD.dompteurExists(nomDeScene))) {
-     * fctD.getDompteur().add(new Dompteur(nomDeScene));
-     * return "Dompteur <" + nomDeScene + "> ajout?.";
-     * } else
-     * return "Le dompteur <" + nomDeScene + "> existe d?j?.";
-     * }
-     */
 
 }

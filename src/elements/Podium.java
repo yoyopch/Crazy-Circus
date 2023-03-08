@@ -5,7 +5,7 @@ import jeu.CrazyCircus;
 import java.util.ArrayList;
 
 public class Podium {
-    private ArrayList<String> Podiums; // Un podium - ArrayList de Sting
+    private final ArrayList<String> Podiums; // Un podium - ArrayList de Sting
 
     /**
      * Constructor de podium

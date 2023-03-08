@@ -1,7 +1,7 @@
 package main;
 
 import affichage.Affichage;
-import jeu.*;
+import jeu.Jeu;
 
 public class Main {
     public static void main(String[] args) {

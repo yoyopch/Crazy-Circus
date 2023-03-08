@@ -1,7 +1,7 @@
 package dompteur;
 
 public class Dompteur {
-    private String NomDompteur; // Le nom du dompteur
+    private final String NomDompteur; // Le nom du dompteur
     private int scoreDompteur; // Le nombre de cartes du dompteur
     private boolean PeutJouer; // Le dompteur peut jouer dans la manche
 
